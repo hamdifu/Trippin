@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,6 +25,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     private EditText editEmail, editPassword;
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
+    private TextView forgotPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +41,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
         editEmail = (EditText) findViewById(R.id.editEmail);
         editPassword = (EditText) findViewById(R.id.editPassword);
+        forgotPassword = (TextView) findViewById(R.id.forgotPassword);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         mAuth = FirebaseAuth.getInstance();
+
+        forgotPassword.setOnClickListener(this);
     }
 
     public void loginFunc(View view) {
@@ -61,10 +66,16 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
             case R.id.registerButton:
                 startActivity(new Intent(this, Register.class));
                 break;
+
             case R.id.loginButton:
                 startActivity(new Intent(this, Login.class));
+
             case R.id.login:
                 userLogin();
+                break;
+
+            case R.id.forgotPassword:
+                startActivity(new Intent(this, ForgotPassword.class));
                 break;
         }
     }
