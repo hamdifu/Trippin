@@ -260,7 +260,7 @@
                 android:layout_margin="16dp"
                 >
                 <ImageView
-                    android:src="@drawable/hotel"
+                    android:src="@drawable/hotel1"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="60dp"
                     android:layout_height="60dp"/>

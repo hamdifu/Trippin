@@ -109,6 +109,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                 if(task.isSuccessful()) {
                     Toast.makeText(Login.this, "You are now Logged In!!", Toast.LENGTH_SHORT).show();
                     //redirect to user profile or home screen
+                    Intent intent1 = new Intent(Login.this, Home.class);
+                    startActivity(intent1);
                 }else {
                     Toast.makeText(Login.this, "Failed to login! Please check your credentials", Toast.LENGTH_LONG).show();
                 }
