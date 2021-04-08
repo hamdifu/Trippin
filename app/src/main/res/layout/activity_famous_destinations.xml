@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ff0a54"
+    tools:context=".FamousDestinations">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:text="Some Famous Locations"
+        android:background="@drawable/textbox"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="34dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="114dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_weight="1"
+                android:background="#ff0a54"
+                app:srcCompat="@drawable/udaipur" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="match_parent"
+                android:layout_height="236dp"
+                android:layout_weight="1"
+                android:background="#ff0a54"
+                app:srcCompat="@drawable/himachal" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_weight="1"
+                android:background="#ff0a54"
+                app:srcCompat="@drawable/jaipur" />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_weight="1"
+                android:background="#ff0a54"
+                app:srcCompat="@drawable/jammu" />
+
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_weight="1"
+                android:background="#ff0a54"
+                app:srcCompat="@drawable/goa" />
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+
+                android:layout_weight="1"
+                android:background="#ff0a54"
+                app:srcCompat="@drawable/kerala" />
+
+            <ImageView
+                android:id="@+id/img7"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_weight="1"
+                android:background="#ff0a54"
+                app:srcCompat="@drawable/varanasi" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
