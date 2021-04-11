@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "284606999640",
+    "project_id": "trippin-73dbd",
+    "storage_bucket": "trippin-73dbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284606999640:android:8956efcfa01c3785f76e2d",
+        "android_client_info": {
+          "package_name": "com.example.trippin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "284606999640-17n3t5rsn0uvjbt4ktrvuguc31c5j9gi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp1ieGChDb6gb5Nhdw-xJRhMz6dy9K1FU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "284606999640-17n3t5rsn0uvjbt4ktrvuguc31c5j9gi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
