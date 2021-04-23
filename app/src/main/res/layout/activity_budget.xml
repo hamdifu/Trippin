@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/budget"
+    tools:context=".Budget">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="95dp"
+            android:layout_height="67dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:padding="0dp"
+            app:srcCompat="@drawable/budgeticon" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Set Your Budget"
+            android:textColor="#ff0a54"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="123dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="158dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/textbox"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Flight"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/f"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/search_layout"
+            android:ems="10"
+            android:inputType="number"
+            android:text=" "
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="123dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="158dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/textbox"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Train"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+        <EditText
+
+            android:id="@+id/t"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/search_layout"
+            android:ems="10"
+            android:inputType="number"
+            android:text=" "
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="158dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/textbox"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Hotel"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/h"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/search_layout"
+            android:ems="10"
+            android:inputType="number"
+            android:text=" "
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="#ff0a54"
+        android:text="Set"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+</LinearLayout>

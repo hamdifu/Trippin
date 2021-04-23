@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".Flights">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto_bold"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="Train Booking"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/from"
+            android:layout_width="169dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            android:text="From"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/f"
+            android:layout_width="147dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/search_layout"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/to"
+            android:layout_width="169dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            android:text="To"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/t"
+            android:layout_width="147dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/search_layout"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Dd"
+            android:layout_width="169dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            android:text="Departure Date"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/dd"
+            android:layout_width="147dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/search_layout"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Ad"
+            android:layout_width="169dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            android:text="Arrival Date"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/ad"
+            android:layout_width="147dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/search_layout"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#ff0a54"
+        android:text="Search"
+        android:textStyle="bold"
+
+        android:textColor="@color/white">
+
+    </Button>
+</LinearLayout>
