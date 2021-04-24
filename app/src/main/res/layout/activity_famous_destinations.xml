@@ -73,9 +73,10 @@
                         android:textSize="30sp"
                         android:padding="20dp"/>
                     <Button
+                        android:id="@+id/udaipur"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="itinerary"
+                        android:text="Information"
                         android:background="@drawable/button_bg"
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="20dp"
@@ -83,7 +84,8 @@
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
                         android:fontFamily="@font/anton"
-                        android:textColor="#bbb" />
+                        android:textColor="#bbb"
+                        android:onClick="info"/>
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
@@ -107,9 +109,10 @@
                     android:textSize="30sp"
                     android:padding="20dp"/>
                 <Button
+                    android:id="@+id/kerala"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:text="itinerary"
+                    android:text="Information"
                     android:background="@drawable/button_bg"
                     android:layout_alignParentBottom="true"
                     android:layout_marginLeft="20dp"
@@ -117,7 +120,8 @@
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:fontFamily="@font/anton"
-                    android:textColor="#bbb" />
+                    android:textColor="#bbb"
+                    android:onClick="info"/>
                 <ImageView
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
@@ -141,9 +145,10 @@
                     android:textSize="30sp"
                     android:padding="20dp"/>
                 <Button
+                    android:id="@+id/varanasi"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:text="itinerary"
+                    android:text="Information"
                     android:background="@drawable/button_bg"
                     android:layout_alignParentBottom="true"
                     android:layout_marginLeft="20dp"
@@ -151,7 +156,8 @@
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:fontFamily="@font/anton"
-                    android:textColor="#bbb" />
+                    android:textColor="#bbb"
+                    android:onClick="info"/>
                 <ImageView
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
@@ -175,9 +181,10 @@
                     android:textSize="30sp"
                     android:padding="20dp"/>
                 <Button
+                    android:id="@+id/ladakh"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:text="itinerary"
+                    android:text="information"
                     android:background="@drawable/button_bg"
                     android:layout_alignParentBottom="true"
                     android:layout_marginLeft="20dp"
@@ -185,7 +192,8 @@
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:fontFamily="@font/anton"
-                    android:textColor="#bbb" />
+                    android:textColor="#bbb"
+                    android:onClick="info"/>
                 <ImageView
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
@@ -209,9 +217,10 @@
                     android:textSize="30sp"
                     android:padding="20dp"/>
                 <Button
+                    android:id="@+id/jaipur"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:text="itinerary"
+                    android:text="information"
                     android:background="@drawable/button_bg"
                     android:layout_alignParentBottom="true"
                     android:layout_marginLeft="20dp"
@@ -219,7 +228,8 @@
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:fontFamily="@font/anton"
-                    android:textColor="#bbb" />
+                    android:textColor="#bbb"
+                    android:onClick="info"/>
                 <ImageView
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
@@ -243,9 +253,10 @@
                     android:textSize="30sp"
                     android:padding="20dp"/>
                 <Button
+                    android:id="@+id/goa"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:text="itinerary"
+                    android:text="Information"
                     android:background="@drawable/button_bg"
                     android:layout_alignParentBottom="true"
                     android:layout_marginLeft="20dp"
@@ -253,7 +264,8 @@
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:fontFamily="@font/anton"
-                    android:textColor="#bbb" />
+                    android:textColor="#bbb"
+                    android:onClick="info"/>
                 <ImageView
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"

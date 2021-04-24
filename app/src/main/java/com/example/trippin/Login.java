@@ -31,8 +31,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
 
         register = (Button) findViewById(R.id.register);
         register.setOnClickListener(this);

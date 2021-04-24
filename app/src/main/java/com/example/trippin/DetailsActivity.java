@@ -1,4 +1,4 @@
-package com.example.trippin;
+/*package com.example.trippin;
 
 import android.os.Bundle;
 
@@ -11,4 +11,4 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
     }
-}
+}*/

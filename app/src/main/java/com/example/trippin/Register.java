@@ -30,10 +30,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
         setContentView(R.layout.activity_register);
-
         mAuth = FirebaseAuth.getInstance();
 
         registerUser = (Button) findViewById(R.id.registerUser);
