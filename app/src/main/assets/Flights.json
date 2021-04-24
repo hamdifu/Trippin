@@ -1,0 +1,49 @@
+{
+    "flight":[
+        {
+            "FlightName": "Go Air",
+            "DepartureTime": "10:55",
+            "Price": "Rs. 4,278"
+        },
+        {
+            "FlightName": "Air Asia",
+            "DepartureTime": "7:30",
+            "Price": "Rs. 4,977"
+        },
+        {
+            "FlightName": "IndiGo",
+            "DepartureTime": "14:55",
+            "Price": "Rs. 5,561"
+        },
+        {
+            "FlightName": "Air India",
+            "DepartureTime": "21:25",
+            "Price": "Rs. 5,678"
+        },
+        {
+            "FlightName": "Spicejet",
+            "DepartureTime": "11:00",
+            "Price": "Rs. 5,955"
+        },
+        {
+            "FlightName": "Vistara",
+            "DepartureTime": "13:30",
+            "Price": "Rs. 5,956"
+        },
+        {
+            "FlightName": "Spicejet",
+            "DepartureTime": "13:55",
+            "Price": "Rs. 8,249"
+        },
+        {
+            "FlightName": "IndiGo",
+            "DepartureTime": "20:35",
+            "Price": "Rs. 5,015"
+        },
+        {
+            "FlightName": "Air India",
+            "DepartureTime": "22:20",
+            "Price": "Rs. 5,450"
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "train":[
+        {
+            "TrainName": "IRCTC TEJAS EXP",
+            "DepartureTime": "3:40",
+            "Price": "Rs. 1,166"
+        },
+        {
+            "TrainName": "NETAJI EXP SPL",
+            "DepartureTime": "5:00",
+            "Price": "Rs. 1,150"
+        },
+        {
+            "TrainName": "JAT SBP SPL",
+            "DepartureTime": "5:53",
+            "Price": "Rs. 1,105"
+        },
+        {
+            "TrainName": "VANDE BHARAT SPL",
+            "DepartureTime": "6:00",
+            "Price": "Rs. 1,755"
+        },
+        {
+            "TrainName": "NDLS LJN SHT SPL",
+            "DepartureTime": "6:10",
+            "Price": "Rs. 1,650"
+        },
+        {
+            "TrainName": "DLI APDJ SPL",
+            "DepartureTime": "7:35",
+            "Price": "Rs. 1,505"
+        },
+        {
+            "TrainName": "GOMTI EXP SPL",
+            "DepartureTime": "12:20",
+            "Price": "Rs. 1,645"
+        },
+        {
+            "TrainName": "GAYA FESTVL SPL",
+            "DepartureTime": "16:40",
+            "Price": "Rs. 1,450"
+        },
+        {
+            "TrainName": "ANVT SMI SPL",
+            "DepartureTime": "18:00",
+            "Price": "Rs. 1,675"
+        }
+    ]
+}

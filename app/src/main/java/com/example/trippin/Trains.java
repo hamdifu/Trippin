@@ -12,7 +12,15 @@ import android.widget.EditText;
 
 import com.example.trippin.adapter.PlaceAutoSuggester;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 
 public class Trains extends AppCompatActivity implements View.OnClickListener {
     AutoCompleteTextView from =null;
@@ -27,6 +35,7 @@ public class Trains extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ArrayList<JSONObject> data= new ArrayList<>();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trains);
         from  = (AutoCompleteTextView)findViewById(R.id.f);
@@ -40,6 +49,42 @@ public class Trains extends AppCompatActivity implements View.OnClickListener {
         to.setAdapter(adapter);
         ArrivalDate.setOnClickListener(this);
         DepartureDate.setOnClickListener(this);
+        try {
+            JSONObject json = new JSONObject(JSONDataFromAssets("Trains.json"));
+            JSONArray jsonArray = json.getJSONArray("train");
+            for(int i=0;i<jsonArray.length();i++){
+                JSONObject j = jsonArray.getJSONObject(i);
+                data.add(j);
+            }
+            Collections.shuffle(data);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        //to access json data
+        //data.get(index).getString("TrainName")
+        //data.get(index).getString("DepartureTime")
+        //data.get(index).getString("Price")
+        // index variable bna lio
+        // use loop main increase karti rahio
+        //main train and flight ki company ke logo ke image assets dhoondti hu tab tak
+
+    }
+
+    private String JSONDataFromAssets(String file){
+        String json = null;
+        try {
+            InputStream inputStream=getAssets().open(file);
+            int sizeOfFile = inputStream.available();
+            byte[] bufferData = new byte[sizeOfFile];
+            inputStream.read(bufferData);
+            inputStream.close();
+            json = new String(bufferData,"UTF-8");
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return json;
+
     }
 
     @Override

@@ -12,10 +12,18 @@ import android.widget.EditText;
 
 import com.example.trippin.adapter.PlaceAutoSuggester;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 
 public class Flights extends AppCompatActivity implements View.OnClickListener {
-
+    ArrayList<JSONObject> data= new ArrayList<>();
     AutoCompleteTextView from =null;
     AutoCompleteTextView to =null;
     EditText ArrivalDate = null;
@@ -40,6 +48,34 @@ public class Flights extends AppCompatActivity implements View.OnClickListener {
         to.setAdapter(adapter);
         ArrivalDate.setOnClickListener(this);
         DepartureDate.setOnClickListener(this);
+        try {
+            JSONObject json = new JSONObject(JSONDataFromAssets("Flights.json"));
+            JSONArray jsonArray = json.getJSONArray("flight");
+            for(int i=0;i<jsonArray.length();i++){
+                JSONObject j = jsonArray.getJSONObject(i);
+                data.add(j);
+            }
+            Collections.shuffle(data);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private String JSONDataFromAssets(String file){
+        String json = null;
+        try {
+            InputStream inputStream=getAssets().open(file);
+            int sizeOfFile = inputStream.available();
+            byte[] bufferData = new byte[sizeOfFile];
+            inputStream.read(bufferData);
+            inputStream.close();
+            json = new String(bufferData,"UTF-8");
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return json;
+
     }
 
     @Override
