@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.example.trippin.adapter.PlaceAutoSuggester;
 
@@ -23,6 +25,7 @@ import java.util.Calendar;
 import java.util.Collections;
 
 public class Trains extends AppCompatActivity implements View.OnClickListener {
+    ArrayList<JSONObject> data= new ArrayList<>();
     AutoCompleteTextView from =null;
     AutoCompleteTextView to =null;
     EditText ArrivalDate = null;
@@ -31,11 +34,15 @@ public class Trains extends AppCompatActivity implements View.OnClickListener {
     PlaceAutoSuggester p = new PlaceAutoSuggester();
     String [] places = p.getPlaces();
     private int mYear, mMonth, mDay;
-
+    ScrollView s;
+    ArrayList<TextView> f = new ArrayList<>();
+    ArrayList<TextView> t = new ArrayList<>();
+    ArrayList<TextView> price = new ArrayList<>();
+    ArrayList<TextView> departure = new ArrayList<>();
+    EditText passenger;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        ArrayList<JSONObject> data= new ArrayList<>();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trains);
         from  = (AutoCompleteTextView)findViewById(R.id.f);
@@ -49,6 +56,8 @@ public class Trains extends AppCompatActivity implements View.OnClickListener {
         to.setAdapter(adapter);
         ArrivalDate.setOnClickListener(this);
         DepartureDate.setOnClickListener(this);
+        s = (ScrollView)findViewById(R.id.scr);
+        passenger = findViewById(R.id.pa);
         try {
             JSONObject json = new JSONObject(JSONDataFromAssets("Trains.json"));
             JSONArray jsonArray = json.getJSONArray("train");
@@ -60,13 +69,38 @@ public class Trains extends AppCompatActivity implements View.OnClickListener {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        //to access json data
-        //data.get(index).getString("TrainName")
-        //data.get(index).getString("DepartureTime")
-        //data.get(index).getString("Price")
-        // index variable bna lio
-        // use loop main increase karti rahio
-        //main train and flight ki company ke logo ke image assets dhoondti hu tab tak
+        f.add(findViewById(R.id.f1t));
+        f.add(findViewById(R.id.f2t));
+        f.add(findViewById(R.id.f3t));
+        f.add(findViewById(R.id.f4t));
+        f.add(findViewById(R.id.f5t));
+        f.add(findViewById(R.id.f6t));
+        f.add(findViewById(R.id.f7t));
+        f.add(findViewById(R.id.f8t));
+        t.add(findViewById(R.id.t1t));
+        t.add(findViewById(R.id.t2t));
+        t.add(findViewById(R.id.t3t));
+        t.add(findViewById(R.id.t4t));
+        t.add(findViewById(R.id.t5t));
+        t.add(findViewById(R.id.t6t));
+        t.add(findViewById(R.id.t7t));
+        t.add(findViewById(R.id.t8t));
+        price.add(findViewById(R.id.p1t));
+        price.add(findViewById(R.id.p2t));
+        price.add(findViewById(R.id.p3t));
+        price.add(findViewById(R.id.p4t));
+        price.add(findViewById(R.id.p5t));
+        price.add(findViewById(R.id.p6t));
+        price.add(findViewById(R.id.p7t));
+        price.add(findViewById(R.id.p8t));
+        departure.add(findViewById(R.id.ti1t));
+        departure.add(findViewById(R.id.ti2t));
+        departure.add(findViewById(R.id.ti3t));
+        departure.add(findViewById(R.id.ti4t));
+        departure.add(findViewById(R.id.ti5t));
+        departure.add(findViewById(R.id.ti6t));
+        departure.add(findViewById(R.id.ti7t));
+        departure.add(findViewById(R.id.ti8t));
 
     }
 
@@ -131,7 +165,34 @@ public class Trains extends AppCompatActivity implements View.OnClickListener {
                     }, mYear, mMonth, mDay);
             datePickerDialog.show();
         }
+    }
+    public void searcht(View view) {
+        String city_from = from.getText().toString();
+        String city_to = to.getText().toString();
+        String people = passenger.getText().toString();
+        Collections.shuffle(data);
+        s.setVisibility(View.VISIBLE);
+        for(int i=0;i<8;i++) {
+            try {
+                String name = data.get(i).getString("TrainName");
+                t.get(i).setText(city_to);
+                String dtime=data.get(i).getString("DepartureTime");
+                departure.get(i).setText("Departure Time : "+dtime);
+                f.get(i).setText(city_from);
+                String Price =  data.get(i).getString("Price");
+//                int p= Integer.parseInt(Price) * Integer.parseInt(people);
+                price.get(i).setText(Price);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
 
+    }
 
+    public void back(View view) {
+        finish();
+    }
+
+    public void logout(View view) {
     }
 }

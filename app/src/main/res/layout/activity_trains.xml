@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#222"
-    tools:context=".Flights">
+    tools:context=".Trains">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -143,9 +143,11 @@
             android:backgroundTint="#ff0a54"
             android:text="Search"
             android:fontFamily="@font/anton"
-            android:textColor="#eee"/>
+            android:textColor="#eee"
+            android:onClick="searcht"/>
     </LinearLayout>
     <ScrollView
+        android:id="@+id/scr"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -153,6 +155,7 @@
         android:paddingTop="10dp"
         android:paddingHorizontal="25px"
         android:background="@drawable/form_bg"
+        android:visibility="invisible"
 
         >
         <LinearLayout
@@ -169,6 +172,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/f1t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/anton"
@@ -187,6 +191,7 @@
                     android:layout_alignParentTop="true"
                     />
                 <TextView
+                    android:id="@+id/t1t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -197,6 +202,7 @@
                     android:textSize="30sp"
                     android:padding="20dp"/>
                 <TextView
+                    android:id="@+id/p1t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="₹ 5000"
@@ -217,6 +223,7 @@
                     android:layout_alignParentBottom="true"
                     />
                 <TextView
+                    android:id="@+id/ti1t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="12:30PM - 7:30AM"
@@ -237,6 +244,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/f2t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/anton"
@@ -255,6 +263,7 @@
                     android:layout_alignParentTop="true"
                     />
                 <TextView
+                    android:id="@+id/t2t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -265,6 +274,7 @@
                     android:textSize="30sp"
                     android:padding="20dp"/>
                 <TextView
+                    android:id="@+id/p2t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="₹ 5000"
@@ -285,6 +295,7 @@
                     android:layout_alignParentBottom="true"
                     />
                 <TextView
+                    android:id="@+id/ti2t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="12:30PM - 7:30AM"
@@ -305,6 +316,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/f3t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/anton"
@@ -323,6 +335,7 @@
                     android:layout_alignParentTop="true"
                     />
                 <TextView
+                    android:id="@+id/t3t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -333,6 +346,7 @@
                     android:textSize="30sp"
                     android:padding="20dp"/>
                 <TextView
+                    android:id="@+id/p3t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="₹ 5000"
@@ -353,6 +367,7 @@
                     android:layout_alignParentBottom="true"
                     />
                 <TextView
+                    android:id="@+id/ti3t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="12:30PM - 7:30AM"
@@ -373,6 +388,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/f4t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/anton"
@@ -391,6 +407,7 @@
                     android:layout_alignParentTop="true"
                     />
                 <TextView
+                    android:id="@+id/t4t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -401,6 +418,7 @@
                     android:textSize="30sp"
                     android:padding="20dp"/>
                 <TextView
+                    android:id="@+id/p4t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="₹ 5000"
@@ -421,6 +439,7 @@
                     android:layout_alignParentBottom="true"
                     />
                 <TextView
+                    android:id="@+id/ti4t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="12:30PM - 7:30AM"
@@ -441,6 +460,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/f5t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/anton"
@@ -459,6 +479,7 @@
                     android:layout_alignParentTop="true"
                     />
                 <TextView
+                    android:id="@+id/t5t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -469,6 +490,7 @@
                     android:textSize="30sp"
                     android:padding="20dp"/>
                 <TextView
+                    android:id="@+id/p5t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="₹ 5000"
@@ -489,6 +511,7 @@
                     android:layout_alignParentBottom="true"
                     />
                 <TextView
+                    android:id="@+id/ti5t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="12:30PM - 7:30AM"
@@ -509,6 +532,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/t6t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/anton"
@@ -527,6 +551,7 @@
                     android:layout_alignParentTop="true"
                     />
                 <TextView
+                    android:id="@+id/f6t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -537,6 +562,7 @@
                     android:textSize="30sp"
                     android:padding="20dp"/>
                 <TextView
+                    android:id="@+id/p6t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="₹ 5000"
@@ -557,6 +583,7 @@
                     android:layout_alignParentBottom="true"
                     />
                 <TextView
+                    android:id="@+id/ti6t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="12:30PM - 7:30AM"
@@ -577,6 +604,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/f7t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/anton"
@@ -595,6 +623,7 @@
                     android:layout_alignParentTop="true"
                     />
                 <TextView
+                    android:id="@+id/t7t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -605,6 +634,7 @@
                     android:textSize="30sp"
                     android:padding="20dp"/>
                 <TextView
+                    android:id="@+id/p7t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="₹ 5000"
@@ -625,6 +655,7 @@
                     android:layout_alignParentBottom="true"
                     />
                 <TextView
+                    android:id="@+id/ti7t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="12:30PM - 7:30AM"
@@ -645,6 +676,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/f8t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/anton"
@@ -663,6 +695,7 @@
                     android:layout_alignParentTop="true"
                     />
                 <TextView
+                    android:id="@+id/t8t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -673,6 +706,7 @@
                     android:textSize="30sp"
                     android:padding="20dp"/>
                 <TextView
+                    android:id="@+id/p8t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="₹ 5000"
@@ -693,6 +727,7 @@
                     android:layout_alignParentBottom="true"
                     />
                 <TextView
+                    android:id="@+id/ti8t"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="12:30PM - 7:30AM"
