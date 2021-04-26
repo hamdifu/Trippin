@@ -3,12 +3,15 @@ package com.example.trippin;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -28,7 +31,7 @@ public class Flights extends AppCompatActivity implements View.OnClickListener {
     ArrayList<JSONObject> data= new ArrayList<>();
     AutoCompleteTextView from =null;
     AutoCompleteTextView to =null;
-    EditText ArrivalDate = null;
+//    EditText ArrivalDate = null;
     EditText DepartureDate = null;
     ArrayAdapter<String> adapter;
     PlaceAutoSuggester p = new PlaceAutoSuggester();
@@ -38,6 +41,9 @@ public class Flights extends AppCompatActivity implements View.OnClickListener {
     ArrayList<TextView> t = new ArrayList<>();
     ArrayList<TextView> price = new ArrayList<>();
     ArrayList<TextView> departure = new ArrayList<>();
+    ArrayList<ImageView> img = new ArrayList<>();
+    private static final String TAG = "MyActivity";
+    EditText passenger;
     private int mYear, mMonth, mDay;
 
     @Override
@@ -47,14 +53,15 @@ public class Flights extends AppCompatActivity implements View.OnClickListener {
         from  = (AutoCompleteTextView)findViewById(R.id.f);
         to  = (AutoCompleteTextView)findViewById(R.id.t);
         DepartureDate = (EditText)findViewById(R.id.dd);
-        ArrivalDate = (EditText)findViewById(R.id.ad);
+//        ArrivalDate = (EditText)findViewById(R.id.ad);
         adapter =new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,places);
         from.setThreshold(1);
         from.setAdapter(adapter);
         to.setThreshold(1);
         to.setAdapter(adapter);
-        ArrivalDate.setOnClickListener(this);
+//        ArrivalDate.setOnClickListener(this);
         DepartureDate.setOnClickListener(this);
+        passenger = (EditText) findViewById(R.id.paf);
         s = (ScrollView)findViewById(R.id.scr);
         try {
             JSONObject json = new JSONObject(JSONDataFromAssets("Flights.json"));
@@ -98,6 +105,14 @@ public class Flights extends AppCompatActivity implements View.OnClickListener {
         departure.add(findViewById(R.id.ti6));
         departure.add(findViewById(R.id.ti7));
         departure.add(findViewById(R.id.ti8));
+        img.add(findViewById(R.id.im1));
+        img.add(findViewById(R.id.im2));
+        img.add(findViewById(R.id.im3));
+        img.add(findViewById(R.id.im4));
+        img.add(findViewById(R.id.im5));
+        img.add(findViewById(R.id.im6));
+        img.add(findViewById(R.id.im7));
+        img.add(findViewById(R.id.im8));
 
     }
 
@@ -122,27 +137,6 @@ public class Flights extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         if(v==DepartureDate)
         {
-        final Calendar c = Calendar.getInstance();
-        mYear = c.get(Calendar.YEAR);
-        mMonth = c.get(Calendar.MONTH);
-        mDay = c.get(Calendar.DAY_OF_MONTH);
-
-
-        DatePickerDialog datePickerDialog = new DatePickerDialog(this,
-                new DatePickerDialog.OnDateSetListener() {
-
-                    @Override
-                    public void onDateSet(DatePicker view, int year,
-                                          int monthOfYear, int dayOfMonth) {
-
-                       DepartureDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
-
-                    }
-                }, mYear, mMonth, mDay);
-        datePickerDialog.show();
-    }
-        if(v==ArrivalDate)
-        {
             final Calendar c = Calendar.getInstance();
             mYear = c.get(Calendar.YEAR);
             mMonth = c.get(Calendar.MONTH);
@@ -155,13 +149,31 @@ public class Flights extends AppCompatActivity implements View.OnClickListener {
                         @Override
                         public void onDateSet(DatePicker view, int year,
                                               int monthOfYear, int dayOfMonth) {
-
-                        ArrivalDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
-
+                            DepartureDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
                         }
                     }, mYear, mMonth, mDay);
             datePickerDialog.show();
         }
+//        if(v==ArrivalDate)
+//        {
+//            final Calendar c = Calendar.getInstance();
+//            mYear = c.get(Calendar.YEAR);
+//            mMonth = c.get(Calendar.MONTH);
+//            mDay = c.get(Calendar.DAY_OF_MONTH);
+//
+//            DatePickerDialog datePickerDialog = new DatePickerDialog(this,
+//                    new DatePickerDialog.OnDateSetListener() {
+//
+//                        @Override
+//                        public void onDateSet(DatePicker view, int year,
+//                                              int monthOfYear, int dayOfMonth) {
+//
+//                            ArrivalDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+//
+//                        }
+//                    }, mYear, mMonth, mDay);
+//            datePickerDialog.show();
+//        }
 
     }
 
@@ -181,17 +193,66 @@ public class Flights extends AppCompatActivity implements View.OnClickListener {
         for(int i=0;i<8;i++) {
             try {
                 String name = data.get(i).getString("FlightName");
+                if (name.compareTo("Go Air")==0){
+                    img.get(i).setImageResource(R.drawable.trujet);
+                }
+                else if(name.compareTo("Air Asia")==0){
+                    img.get(i).setImageResource(R.drawable.airasia);
+
+                }
+                else if(name.compareTo("IndiGo")==0){
+                    img.get(i).setImageResource(R.drawable.indigo);
+
+                }
+                else if(name.compareTo("Air India")==0){
+                    img.get(i).setImageResource(R.drawable.airindia);
+
+                }
+                else if(name.compareTo("Spicejet")==0){
+                    img.get(i).setImageResource(R.drawable.spicejet);
+
+                }
+                else if(name.compareTo("Vistara")==0){
+                    img.get(i).setImageResource(R.drawable.vistara);
+
+                }
                 t.get(i).setText(city_to);
                 String dtime=data.get(i).getString("DepartureTime");
+//                String dtime = DepartureDate.getText().toString();
                 departure.get(i).setText("Departure Time : "+dtime);
                 f.get(i).setText(city_from);
-               String Price =  data.get(i).getString("Price");
-               price.get(i).setText(Price);
+                String Price =  data.get(i).getString("Price");
+                price.get(i).setText("₹"+Price);
 
             } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
 
+    }
+    public void buya(View view) {
+        String tag = view.getTag().toString();
+        int index = Integer.parseInt(tag)-1;
+        Intent intent = new Intent(Flights.this,Buy.class);
+        intent.putExtra("to",to.getText().toString());
+        intent.putExtra("from",from.getText().toString());
+        intent.putExtra("dtime",departure.get(index).getText().toString());
+        String Price = null;
+        try {
+            intent.putExtra("name",data.get(index).getString("FlightName"));
+            Price = data.get(index).getString("Price");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        String people = passenger.getText().toString();
+        intent.putExtra("people",Integer.parseInt(people));
+        Log.i(TAG, "people done");
+        intent.putExtra("price",Integer.parseInt(Price));
+        Log.i(TAG, "price done");
+        intent.putExtra("dday",DepartureDate.getText().toString());
+        Log.i(TAG, "departure date done");
+        intent.putExtra("type","flight");
+        Log.i(TAG, "type done");
+        startActivity(intent);
     }
 }

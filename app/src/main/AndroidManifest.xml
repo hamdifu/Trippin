@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Trippin">
-        <activity android:name=".DestinationsInormation"></activity>
+        <activity android:name=".Buy"></activity>
+        <activity android:name=".DestinationsInormation" />
         <activity android:name=".Couches" />
         <activity android:name=".Hotels" />
         <activity android:name=".Trains" />

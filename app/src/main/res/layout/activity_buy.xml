@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Buy"
+    android:orientation="vertical"
+    android:background="#222">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_marginTop="5dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/back"
+                android:padding="15dp"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:layout_marginLeft="10dp"
+                android:onClick="back"
+                />
+
+            <Button
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/anton"
+                android:onClick="logout"
+                android:text="Logout"
+                android:textColor="#ddd"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"/>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/dest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destination"
+            android:fontFamily="@font/anton"
+            android:textColor="#ddd"
+            android:paddingHorizontal="20dp"
+            android:textSize="50dp"/>
+        <TextView
+            android:id="@+id/airline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Airline"
+            android:fontFamily="@font/anton"
+            android:textColor="#ddd"
+            android:paddingHorizontal="20dp"
+            android:textSize="25dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="600dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:background="@drawable/form_bg"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="#eee"
+                >
+                <TextView
+                    android:id="@+id/ft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delhi ••• Agartala"
+                    android:fontFamily="@font/anton"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/passenger"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ft"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/anton"
+                    android:text="Passengers       : "
+                    android:textSize="17dp" />
+                <TextView
+                    android:id="@+id/adt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/passenger"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/anton"
+                    android:text="Departure Date : "
+                    android:textSize="17dp" />
+                <TextView
+                    android:id="@+id/ati"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/adt"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/anton"
+                    android:text="Departure Time : "
+                    android:textSize="17dp" />
+                <TextView
+                    android:id="@+id/pp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ati"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/anton"
+                    android:text="Price ( pp )        : "
+                    android:textSize="17dp" />
+                <TextView
+                    android:id="@+id/tax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/anton"
+                    android:text="Tax ( 8% )         : "
+                    android:textSize="17dp" />
+
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/vistara"
+                android:layout_marginRight="20dp"/>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp"
+        android:background="#ff0a54"
+        android:paddingTop="10dp">
+        <TextView
+            android:id="@+id/totalp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anton"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:onClick="back"
+            android:text="Price : "
+            android:textColor="#eee"
+            android:textSize="23dp"
+            />
+
+        <Button
+            android:id="@+id/add_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_bg"
+            android:fontFamily="@font/anton"
+            android:onClick="cart"
+            android:text="Add to travel cart"
+            android:textColor="#ddd"
+            android:paddingHorizontal="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp" />
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

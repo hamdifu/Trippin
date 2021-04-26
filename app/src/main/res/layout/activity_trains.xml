@@ -155,9 +155,9 @@
         android:paddingTop="10dp"
         android:paddingHorizontal="25px"
         android:background="@drawable/form_bg"
-        android:visibility="invisible"
+        android:visibility="invisible">
 
-        >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -169,6 +169,9 @@
                 android:backgroundTint="#2a9d8f"
                 android:background="#444"
                 android:layout_margin="10dp"
+                android:clickable="true"
+                android:onClick="buy"
+                android:tag="1"
                 >
 
                 <TextView
@@ -214,13 +217,16 @@
                     android:paddingRight="30dp"
                     android:textSize="22dp"
                     />
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/air_india"
-                    android:layout_marginBottom="15dp"
+                <TextView
+                    android:id="@+id/tn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_alignParentBottom="true"
+                    android:paddingBottom="32dp"
+                    android:text="Shatabdi express"
+                    android:fontFamily="@font/anton"
+                    android:textSize="15dp"
                     />
                 <TextView
                     android:id="@+id/ti1t"
@@ -241,6 +247,9 @@
                 android:backgroundTint="#ff0a54"
                 android:background="#444"
                 android:layout_margin="10dp"
+                android:clickable="true"
+                android:onClick="buy"
+                android:tag="2"
                 >
 
                 <TextView
@@ -286,13 +295,16 @@
                     android:paddingRight="30dp"
                     android:textSize="22dp"
                     />
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/air_india"
-                    android:layout_marginBottom="15dp"
+                <TextView
+                    android:id="@+id/tn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_alignParentBottom="true"
+                    android:paddingBottom="32dp"
+                    android:text="Shatabdi express"
+                    android:fontFamily="@font/anton"
+                    android:textSize="15dp"
                     />
                 <TextView
                     android:id="@+id/ti2t"
@@ -313,6 +325,9 @@
                 android:backgroundTint="#2a9d8f"
                 android:background="#444"
                 android:layout_margin="10dp"
+                android:clickable="true"
+                android:onClick="buy"
+                android:tag="3"
                 >
 
                 <TextView
@@ -358,13 +373,16 @@
                     android:paddingRight="30dp"
                     android:textSize="22dp"
                     />
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/air_india"
-                    android:layout_marginBottom="15dp"
+                <TextView
+                    android:id="@+id/tn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_alignParentBottom="true"
+                    android:paddingBottom="32dp"
+                    android:text="Shatabdi express"
+                    android:fontFamily="@font/anton"
+                    android:textSize="15dp"
                     />
                 <TextView
                     android:id="@+id/ti3t"
@@ -385,6 +403,9 @@
                 android:backgroundTint="#ff0a54"
                 android:background="#444"
                 android:layout_margin="10dp"
+                android:clickable="true"
+                android:onClick="buy"
+                android:tag="4"
                 >
 
                 <TextView
@@ -430,13 +451,16 @@
                     android:paddingRight="30dp"
                     android:textSize="22dp"
                     />
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/air_india"
-                    android:layout_marginBottom="15dp"
+                <TextView
+                    android:id="@+id/tn4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_alignParentBottom="true"
+                    android:paddingBottom="32dp"
+                    android:text="Shatabdi express"
+                    android:fontFamily="@font/anton"
+                    android:textSize="15dp"
                     />
                 <TextView
                     android:id="@+id/ti4t"
@@ -457,6 +481,9 @@
                 android:backgroundTint="#2a9d8f"
                 android:background="#444"
                 android:layout_margin="10dp"
+                android:clickable="true"
+                android:onClick="buy"
+                android:tag="5"
                 >
 
                 <TextView
@@ -502,13 +529,16 @@
                     android:paddingRight="30dp"
                     android:textSize="22dp"
                     />
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/air_india"
-                    android:layout_marginBottom="15dp"
+                <TextView
+                    android:id="@+id/tn5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_alignParentBottom="true"
+                    android:paddingBottom="32dp"
+                    android:text="Shatabdi express"
+                    android:fontFamily="@font/anton"
+                    android:textSize="15dp"
                     />
                 <TextView
                     android:id="@+id/ti5t"
@@ -529,6 +559,9 @@
                 android:backgroundTint="#ff0a54"
                 android:background="#444"
                 android:layout_margin="10dp"
+                android:clickable="true"
+                android:onClick="buy"
+                android:tag="6"
                 >
 
                 <TextView
@@ -574,13 +607,16 @@
                     android:paddingRight="30dp"
                     android:textSize="22dp"
                     />
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/air_india"
-                    android:layout_marginBottom="15dp"
+                <TextView
+                    android:id="@+id/tn6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_alignParentBottom="true"
+                    android:paddingBottom="32dp"
+                    android:text="Shatabdi express"
+                    android:fontFamily="@font/anton"
+                    android:textSize="15dp"
                     />
                 <TextView
                     android:id="@+id/ti6t"
@@ -601,6 +637,9 @@
                 android:backgroundTint="#2a9d8f"
                 android:background="#444"
                 android:layout_margin="10dp"
+                android:clickable="true"
+                android:onClick="buy"
+                android:tag="7"
                 >
 
                 <TextView
@@ -646,13 +685,16 @@
                     android:paddingRight="30dp"
                     android:textSize="22dp"
                     />
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/air_india"
-                    android:layout_marginBottom="15dp"
+                <TextView
+                    android:id="@+id/tn7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_alignParentBottom="true"
+                    android:paddingBottom="32dp"
+                    android:text="Shatabdi express"
+                    android:fontFamily="@font/anton"
+                    android:textSize="15dp"
                     />
                 <TextView
                     android:id="@+id/ti7t"
@@ -673,6 +715,9 @@
                 android:backgroundTint="#ff0a54"
                 android:background="#444"
                 android:layout_margin="10dp"
+                android:clickable="true"
+                android:onClick="buy"
+                android:tag="8"
                 >
 
                 <TextView
@@ -718,13 +763,16 @@
                     android:paddingRight="30dp"
                     android:textSize="22dp"
                     />
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/air_india"
-                    android:layout_marginBottom="15dp"
+                <TextView
+                    android:id="@+id/tn8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_alignParentBottom="true"
+                    android:paddingBottom="32dp"
+                    android:text="Shatabdi express"
+                    android:fontFamily="@font/anton"
+                    android:textSize="15dp"
                     />
                 <TextView
                     android:id="@+id/ti8t"
